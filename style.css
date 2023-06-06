@@ -48,10 +48,20 @@ small {
     font-size: 24px;
 } 
 
+.form {
+    background-color: aqua;
+}
+
 .hidden {
     opacity: 0;
     filter: blur(6px);
     transform: translateX(-100%);
+    transition: all 1.5s;
+}
+.hiddenRight {
+    opacity: 0;
+    filter: blur(6px);
+    transform: translateX(100%);
     transition: all 1.5s;
 }
 
