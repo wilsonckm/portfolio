@@ -61,11 +61,12 @@ $(() => {
         $('').append('Thank you! Talk to you soon!')
     })
     
-    //carousel:
-    //next button:
 
+
+
+    //carousel:
     const $imageDiv = $('<div>').css('position', 'relative');
-    
+    //next button:
     // const $nextButton = $('<div>').addClass('carousel-button next').text('>');
     // $('.imgSlide').append($nextButton);
     const $nextButton = $(".carousel-button.next");
@@ -73,80 +74,37 @@ $(() => {
     
 
     $nextButton.on('click', () => {
-        console.log('next!')
-        indexImage = (indexImage + 1) % imageArr.length;
-        showImage()
+        // indexImage = (indexImage + 1) % imageArr.length;
+        if (indexImage >= imageArr.length-1) {
+                indexImage = 0;
+                console.log(indexImage);
+            } else {
+                    indexImage += 1;
+                
+                    console.log(indexImage);
+                }
 
-        // if (indexImage >= imageArr.length-1) {
-        //     indexImage = 0;
-        //     console.log(indexImage);
-        // } else {
-        //     indexImage += 1;
-            
-        //     console.log(indexImage);
-        // }
-        // $imageDiv.append(`<img id = "Wilson's Image" src = ${imageArr[indexImage]} />`);
-        // $('.image-container').append($imageDiv);
-        
+        showImage()
     })
+    
+
     //previous button
-    // const $prevButton = $('<div>').addClass('carousel-button prev').text('<');
-    // $('.imgSlide').prepend($prevButton);
     const $prevButton = $(".carousel-button.prev");
     $prevButton.css('cursor', 'pointer');
     
     $prevButton.on('click', () => { 
-       console.log('prev!')
-       
-       indexImage = (indexImage - 1 + imageArr.length) % imageArr.length;
-       showImage()
+    //    indexImage = (indexImage - 1 + imageArr.length) % imageArr.length;
+       if (indexImage < 1 ) {
+               indexImage = imageArr.length-1;
+               console.log(indexImage);
+           } else {
+                   indexImage -= 1;
+               
+                   console.log(indexImage);
+               }
 
-        // if (indexImage < 1 ) {
-        //     indexImage = imageArr.length-1;
-        //     console.log(indexImage);
-        // } else {
-        //     indexImage -= 1;
-            
-        //     console.log(indexImage);
-        // }
-        // $imageDiv.append(`<img id = "Wilson's Image" src = ${imageArr[indexImage]} />`);
-        // $('.image-container').append($imageDiv);
-    
+        showImage()
     })
-
     showImage();
 });
 
-
-
-
-
-//carousel??
-    // let slideCounter =1;
-    // showSlides(slideIndex);
-
-    // function plusSlides(n) {
-    //     showSlides(slideIndex += n);
-    // }
-
-    // function currentSlide(n) {
-    //     showSlides(slideIndex = n);
-    // }
-
-    // function showSlides(n) {
-    //     const slides=document.getElementsByClassName('carousel');
-    //     const dots = document.getElementsByClassName('dot');
-    //     if (n > slides.length) {slideIndex=1}
-    //     if (n <1) {slideIndex = slide.length}
-    //     for (i=0; i<slides.length; i++) {
-    //         slides[i].getElementsByClassName.display = 'none';
-    //     }
-    //     for (i=0; i<slide.length; i++) {
-    //         slides[i].getElementsByClassName.display = 'none';
-    //     }
-    //     for (i=0; i<dots.length; i++) {
-    //         dots[i].clasName = dots[i].className.replace('active', "");
-    //     }
-    //     slides[slideIndex-1].style.display='block';
-    //     dots[slideIndex-1].className += "active";
-    // }
