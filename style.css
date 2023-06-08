@@ -16,15 +16,9 @@ nav {
 }
 
 section {
-    display: grid;
-    place-items: center;
-    align-content: center; 
     padding-left: 50px;
     padding-right: 50px;
-}
-.about {
     display: flex;
-    justify-content: space-around;
 }
 
 h1 {
@@ -85,9 +79,10 @@ small {
     cursor: pointer;
 }
 
-/* .carousel-button:hover {
+.carousel-button:hover {
     opacity: 1;
-} */
+    transition: all .5s;
+}
 .next {
     right:0;
 }
@@ -149,7 +144,7 @@ div {
         margin: auto;
     }
 
-    .about {
+    section {
         display: flex;
         flex-direction: column-reverse;
         justify-content: center;
