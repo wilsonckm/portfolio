@@ -44,7 +44,7 @@ const imageArr = [
 const showImage = () => {
 const $imageDiv = $('.imgSlide');
   $imageDiv.empty();
-  $imageDiv.append(`<img src="${imageArr[indexImage]}">`);
+  $imageDiv.append(`<img src="${imageArr[indexImage]}" class="imgSlide">`);
 };
 
 $(() => {
@@ -67,41 +67,27 @@ $(() => {
     //carousel:
     const $imageDiv = $('<div>').css('position', 'relative');
     //next button:
-    // const $nextButton = $('<div>').addClass('carousel-button next').text('>');
-    // $('.imgSlide').append($nextButton);
     const $nextButton = $(".carousel-button.next");
     $nextButton.css('cursor', 'pointer');
-    
-
     $nextButton.on('click', () => {
         // indexImage = (indexImage + 1) % imageArr.length;
         if (indexImage >= imageArr.length-1) {
                 indexImage = 0;
-                console.log(indexImage);
             } else {
                     indexImage += 1;
-                
-                    console.log(indexImage);
                 }
-
         showImage()
     })
-    
-
     //previous button
     const $prevButton = $(".carousel-button.prev");
     $prevButton.css('cursor', 'pointer');
     $prevButton.on('click', () => { 
-    //    indexImage = (indexImage - 1 + imageArr.length) % imageArr.length;
+        //indexImage = (indexImage - 1 + imageArr.length) % imageArr.length;
        if (indexImage < 1 ) {
                indexImage = imageArr.length-1;
-               console.log(indexImage);
            } else {
                    indexImage -= 1;
-               
-                   console.log(indexImage);
                }
-
         showImage()
     })
     showImage();

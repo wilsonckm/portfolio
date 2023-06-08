@@ -3,20 +3,24 @@
 body {
     font-family: inter, sans-serif;
     background-color: #e0e0e0 ;
-    padding: 0;
-    margin: 0;
+    padding-right: 50px;
+    padding-left: 50px;
+    margin: 25px;
 }
 
 nav {
     text-align: right;
-    padding-right: 60px;
-    padding-top: 10px;
+    padding-right: 0px;
+    padding-top: 0px;
+    margin: 10px;
 }
 
 section {
     display: grid;
     place-items: center;
     align-content: center; 
+    padding-left: 50px;
+    padding-right: 50px;
 }
 .about {
     display: flex;
@@ -57,33 +61,27 @@ a:hover {
     transition: all .1s;
 }
 
-
-
 small {
     font-size: 24px;
 } 
 
 .image-container {
-    max-width: 1000px;
+    max-width: 1100px;
     position: relative;
     margin: auto;
+    padding-top: 100px;
 }
 
 .carousel-button{
-    height: 22px;
-    width: 50px;
-    border-radius: 50%;
     background-color: rgba(0, 0, 0, 0.244); 
     text-align: center;
     opacity: .5;
     position: absolute;
     top: 50%;
     width:auto;
-    padding:16px;
-    margin-top: -22px;
+    padding: 20px;
     color: white;
     font-size: 20px;
-    transition: 0.5 ease-in;
     cursor: pointer;
 }
 
@@ -95,16 +93,22 @@ small {
 }
 
 .prev {
-    left: 0
+    left: 0;
 }
 
 img {
+    height: 800px;
+    position: relative
+}
+
+.imgSlide {
     height: 600px;
     position: relative
 }
 
 div {
-    margin: 30px;
+    margin: auto;
+    padding: 10px;
 }
 
 .portrait {
@@ -157,10 +161,6 @@ div {
         margin-top: 300px;
         left: 50%;
         transform: translate(-50%, -50%);
-    }
-
-    div {
-        margin: 15px;
     }
 
     h1 {

@@ -13,3 +13,7 @@ Successfully added a carousel that iterates through an array of URL of photos. W
 
 ### Commit 6 and 7
 Updated media query and added links/icons
+
+
+### Commit 8
+Adjusted spacing, css for images, classes to separate specific images/portraits.
