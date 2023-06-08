@@ -113,5 +113,9 @@ $(() => {
     //Squarespace
     const $squarespace = $("<a>").addClass("fa-brands fa-squarespace").attr("href", "https://www.wilsonchanphotography.com/travel")
     $(".footer").append($squarespace);
+
+    //nav-on hover:
+
+
 });
 
