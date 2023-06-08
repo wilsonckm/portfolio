@@ -58,7 +58,7 @@ $(() => {
         addData(newFirstName, newLastName, newEmail, message);
         console.log(data)
         //$('section').addClass('hidden');
-        $('').append('Thank you! Talk to you soon!')
+        $('.form').append('Thank you! Talk to you soon!')
     })
     
 
@@ -91,7 +91,6 @@ $(() => {
     //previous button
     const $prevButton = $(".carousel-button.prev");
     $prevButton.css('cursor', 'pointer');
-    
     $prevButton.on('click', () => { 
     //    indexImage = (indexImage - 1 + imageArr.length) % imageArr.length;
        if (indexImage < 1 ) {
@@ -106,5 +105,13 @@ $(() => {
         showImage()
     })
     showImage();
+
+    //Links:
+    //Linkedin
+    const $linkedIn = $("<a>").addClass("fa-brands fa-linkedin-in").attr("href", "https://www.linkedin.com/in/wilson-chan-pt-dpt-000a49210/")
+    $(".footer").append($linkedIn);
+    //Squarespace
+    const $squarespace = $("<a>").addClass("fa-brands fa-squarespace").attr("href", "https://www.wilsonchanphotography.com/travel")
+    $(".footer").append($squarespace);
 });
 

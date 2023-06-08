@@ -2,7 +2,7 @@
 
 body {
     font-family: inter, sans-serif;
-    background-color: #d5d5d5 ;
+    background-color: #e0e0e0 ;
     padding: 0;
     margin: 0;
 }
@@ -11,6 +11,11 @@ section {
     display: grid;
     place-items: center;
     align-content: center; 
+}
+
+.about {
+    display: flex;
+    justify-content: space-around;
 }
 
 h1 {
@@ -44,11 +49,6 @@ a {
     margin-left: 15px;
 }
 
-a:hover {
-    background-color: #f2f2f200;
-    color: rgb(118, 118, 118);
-    filter: blur(1px)
-}
 
 small {
     font-size: 24px;
@@ -68,29 +68,36 @@ small {
     100% {
         opacity: 0;
     }
-
-    } */
+    
+} */
 
 .image-container {
-        max-width: 1000px;
-        position: relative;
-        margin: auto;
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
 }
 
 .carousel-button{
-    height: 100px;
-    width: 100px;
-    border-radius: 40%;
-    background-color: aqua;
+    height: 22px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.244); 
     text-align: center;
     opacity: .5;
     position: absolute;
     top: 50%;
     width:auto;
     padding:16px;
-    margin-top: -22px
+    margin-top: -22px;
+    color: white;
+    font-size: 20px;
+    transition: 0.5 ease-in;
+    cursor: pointer;
 }
 
+/* .carousel-button:hover {
+    opacity: 1;
+} */
 .next {
     right:0;
 }
@@ -100,11 +107,36 @@ small {
 }
 
 img {
-    height: 200px;
+    height: 600px;
     width: 100%;
     position: relative
 }
 
+div {
+    margin: 50px;
+}
+
+.portrait {
+    height: auto;
+    max-width:100%;
+    position: relative;
+    display: block;
+}
+
+.a:hover {
+    background-color: #9b3c3c00;
+    color: rgb(118, 118, 118);
+    filter: blur(6px);
+    transition: all 1.5s;
+}
+
+.custom-input {
+    border: 1px;
+    font-size: 14px;
+    position: relative;
+    background-color: #f2f2f2;
+
+}
 
 /* Intersection Observer CSS */
 
