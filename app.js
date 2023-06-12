@@ -22,15 +22,6 @@ const addData = (fName, lName, emailParam, messageParam) => {
     data.push({firstName: fName, lastName: lName, email: emailParam, message: messageParam});
 }
 
-// indexImage = (urlArr) => {
-//     for (let i=0; i<urlArr.length; i++){
-//         if (i > urlArr.length) {
-//             i === 0
-//             return urlArr[i];
-//         } else return urlArr[i];
-//     }
-// }
-
 let indexImage = 0;
 const imageArr = [
     'https://images.squarespace-cdn.com/content/v1/570084ed62cd94d3a2ac2196/1604593042837-6GY50U84DMA06VIVW4BP/WCKM-0564.jpg?format=750w', 
@@ -57,8 +48,7 @@ $(() => {
         //console.log(newFirstName, newLastName, newEmail, message);
         addData(newFirstName, newLastName, newEmail, message);
         console.log(data)
-        //$('section').addClass('hidden');
-        $('.form').append('Thank you! Talk to you soon!')
+        $('.footer').append('Thank you! Talk to you soon!')
     })
     
 
@@ -100,8 +90,16 @@ $(() => {
     const $squarespace = $("<a>").addClass("fa-brands fa-squarespace").attr("href", "https://www.wilsonchanphotography.com/travel")
     $(".footer").append($squarespace);
 
-    //nav-on hover:
 
+
+    //Menu toggle and animation:
+    const $menuButton = $(".menu")
+    const $navBar = $(".links")
+        $menuButton.on('click',() => {
+            $menuButton.toggleClass("morph");
+            $navBar.toggleClass("hidden");
+
+        })
 
 });
 

@@ -16,3 +16,6 @@ Updated media query and added links/icons
 
 ### Commit 8
 Adjusted spacing, css for images, and classes to separate specific images/portraits.
+
+### Commit 9
+Updated submit button "thank you" message. Added menu button with transitions.
